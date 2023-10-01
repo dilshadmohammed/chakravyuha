@@ -22,7 +22,7 @@ db.connect((err) => {
   else console.log("Database connected");
 });
 
-
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.static('public/images'));
 app.use(express.json());
