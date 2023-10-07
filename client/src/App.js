@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import api from './api';
 import './App.css';
 import { useState } from 'react';
+import Navbar from './Components/Navbar/Navbar';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         >
           Link to react
         </a>
+        <Navbar/>
         <h2>{state}</h2>
       </header>
     </div>
