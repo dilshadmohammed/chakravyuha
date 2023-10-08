@@ -2,10 +2,27 @@
 import './ImageSlider.css';
 
 const ImageSliderAuto = (props) => {
-    const SliderProperty = {
-        ImageNo: '',
-        ImageName: '',
-        ImageSrc: ''
+  const SliderProperty = {
+    ImageNo: '',
+    ImageName: '',
+    ImageSrc: ''
+  };
+
+  const [sliderProperty, setSliderProperty] = useState(SliderProperty);
+  const { ImageNo, ImageName, ImageSrc } = sliderProperty;
+  const [countAuto, setCountAuto] = useState(0);
+  const [animationCls, setAnimationCls] = useState('displayBlock');
+
+  const NextClick = () => {
+    setAnimationCls('displayNone');
+    setTimeout(() => {
+      setAnimationCls('displayBlock');
+    }, 100);
+
+    if (countAuto < props.ImageData.length - 1) {
+      setCountAuto(countAuto + 1);
+    } else {
+      setCountAuto(0);
     }
 
     const [sliderProperty, setSliderProperty] = useState(SliderProperty);
