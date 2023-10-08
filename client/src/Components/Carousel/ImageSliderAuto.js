@@ -50,7 +50,7 @@ const ImageSliderAuto = (props) => {
 
             NextClick();
 
-        }, props.SlideInterValTime + 5000);
+        }, props.SlideInterValTime + 3000);
 
         return () => clearInterval(interval);
 
