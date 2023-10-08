@@ -1,0 +1,28 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-74.0059, 40.7128]
+        },
+        "properties": {
+          "name": "Landslide Spot 1",
+          "severity": "Low"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-73.9859, 40.7028]
+        },
+        "properties": {
+          "name": "Landslide Spot 2",
+          "severity": "High"
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,44 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [-74.0059, 40.7128],
+              [-74.0059, 40.7228],
+              [-73.9959, 40.7228],
+              [-73.9959, 40.7128],
+              [-74.0059, 40.7128]
+            ]
+          ]
+        },
+        "properties": {
+          "name": "Flood Area 1",
+          "severity": "High"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [-73.9959, 40.7028],
+              [-73.9959, 40.7128],
+              [-73.9859, 40.7128],
+              [-73.9859, 40.7028],
+              [-73.9959, 40.7028]
+            ]
+          ]
+        },
+        "properties": {
+          "name": "Flood Area 2",
+          "severity": "Medium"
+        }
+      }
+    ]
+  }
+  
