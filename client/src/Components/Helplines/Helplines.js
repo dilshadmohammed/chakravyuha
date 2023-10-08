@@ -3,6 +3,8 @@ import './Helplines.css'; // Import the CSS file for styling
 
 function Helplines() {
   return (
+    <div>
+      <h2 className='helpline-title'>Helpline</h2>
     <div className="box">
       <table>
       <thead>
@@ -38,6 +40,7 @@ function Helplines() {
       </tbody>
     </table>
     </div>
+  </div>
   );
 }
 

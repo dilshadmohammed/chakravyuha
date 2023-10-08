@@ -2,28 +2,32 @@
     width: 500px;
     border: 1px solid #ccc;
     padding: 20px;
-    background-color: #131212;
+    /* background-color: #131212; */
     margin: 20px;
     display: flex;
     justify-content: center;
   }
   
+.helpline-title {
+  font-size: 3rem;
+}
+
   table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
-    background-color: rgb(61, 57, 57);
+    /* background-color: rgb(61, 57, 57); */
   }
   
   th {
-    border: 4px solid #000000;
+    border: 1px solid #000000;
     padding: 8px;
     text-align: center;
     font-size: larger;
   }
   
   td {
-    border: 4px solid #000000;
+    border: 1px solid #000000;
     padding: 8px;
     text-align: left;
   }

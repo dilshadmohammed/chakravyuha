@@ -67,7 +67,7 @@ const ImageSliderAuto = (props) => {
                     <div className="numbertext">{ImageNo}</div>
                     <img src={ImageSrc} className='imageStyle' alt="Img" />
                 </div>
-                <div className="text">{ImageName}</div>
+                {/* <div className="text">{ImageName}</div> */}
             </div>
 
 
