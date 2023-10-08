@@ -4,7 +4,12 @@
     align-items: center;
 }
 
+.about-title {
+    font-size: 4rem;
+}
+
 .about-description {
+    font-size: 1.5rem;
     max-width: 55em;
     padding: 0 6em;
     text-align: center;

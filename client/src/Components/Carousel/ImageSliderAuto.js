@@ -24,38 +24,73 @@ const ImageSliderAuto = (props) => {
     } else {
       setCountAuto(0);
     }
-  };
 
-  useEffect(() => {
-    setSliderProperty({
-      ImageNo: props.ImageData[countAuto].ImageNo,
-      ImageName: props.ImageData[countAuto].ImageName,
-      ImageSrc: props.ImageData[countAuto].ImageSrc
-    });
-  }, [countAuto]);
+    const [sliderProperty, setSliderProperty] = useState(SliderProperty);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      NextClick();
-    }, props.SlideInterValTime + 5000);
+    const { ImageNo, ImageName, ImageSrc } = sliderProperty;
 
-    return () => clearInterval(interval);
-  }, [countAuto]);
+    const [countAuto, setCountAuto] = useState(0);
 
-  return (
-    <>
-      <div className="slideshow-container">
-        <div className={`${animationCls} fade`}>
-          <div className="numbertext">{ImageNo}</div>
-          <img src={ImageSrc} className="imageStyle" alt="Img" />
-        </div>
-        <div className="text">{ImageName}</div>
-        <div className="overlay">
-          <p>{props.TextData[countAuto]}</p>
-        </div>
-      </div>
-    </>
-  );
+
+    const [animationCls, setAnimationCls] = useState('displayBlock fade');
+
+
+
+    const NextClick = () => {
+
+        setAnimationCls(() => ('displayNone fade'));
+        const myTimeout = setTimeout(() => {
+            setAnimationCls('displayBlock fade')
+        }, 100);
+
+        if (countAuto <= props.ImageData.length - 1) {
+            setCountAuto(countAuto + 1);
+        }
+
+        if (countAuto === props.ImageData.length - 1) {
+            setCountAuto(0);
+        }
+
+    };
+
+    useEffect(() => {
+
+        setSliderProperty((previous) => ({ ...previous, ImageNo: props.ImageData[countAuto].ImageNo, ImageName: props.ImageData[countAuto].ImageName, ImageSrc: props.ImageData[countAuto].ImageSrc }));
+
+    }, [countAuto]);
+
+
+
+    useEffect(() => {
+
+        const interval = setInterval(() => {
+
+            NextClick();
+
+        }, props.SlideInterValTime + 3000);
+
+        return () => clearInterval(interval);
+
+    }, [countAuto]);
+
+
+
+    return (
+        <>
+            <div className='slideshow-container '>
+
+
+                <div className={animationCls}>
+                    <div className="numbertext">{ImageNo}</div>
+                    <img src={ImageSrc} className='imageStyle' alt="Img" />
+                </div>
+                {/* <div className="text">{ImageName}</div> */}
+            </div>
+
+
+        </>
+
+    );
 };
 
 export default ImageSliderAuto;
