@@ -7,8 +7,7 @@ import Helplines from './Components/Helplines/Helplines';
 import About from './Components/About/About'
 import ImageSlider from './Components/Carousel/ImageSlider';
 import ImageSliderAuto from './Components/Carousel/ImageSliderAuto';
-import { ImageData } from './Components/Carousel/json/jsonData';
-
+import {ImageData, TextData} from './Components/Carousel/json/jsonData';
 
 function App() {
 
@@ -17,7 +16,7 @@ function App() {
       <Navbar/>
       <section id="hero">
       {/* <ImageSlider ImageData={ImageData} /><br /> */}
-      <ImageSliderAuto ImageData={ImageData} SlideInterValTime={2000} />
+      <ImageSliderAuto ImageData={ImageData} TextData={TextData} SlideInterValTime={2000} />
 
       </section>
       <section id="about">
