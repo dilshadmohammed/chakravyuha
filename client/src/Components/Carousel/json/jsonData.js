@@ -1,9 +1,9 @@
-import Img1 from '../Slidelist/img1.jpg'
-import Img2 from '../Slidelist/img2.jpg'
-import Img3 from '../Slidelist/img3.jpg'
-import Img4 from '../Slidelist/img4.jpg'
-import Img5 from '../Slidelist/img5.jpg'
-import Img6 from '../Slidelist/img6.jpg'
+import Img1 from '../Slidelist/Relieflinkblack.png'
+import Img2 from '../Slidelist/professional.jpg'
+import Img3 from '../Slidelist/flood.jpg'
+import Img4 from '../Slidelist/corona.jpg'
+import Img5 from '../Slidelist/nipah.jpg'
+import Img6 from '../Slidelist/contact.jpg'
 export const ImageData = [
     {
         ImageNo: '1/6',

@@ -54,7 +54,7 @@ function Navbar() {
                 <div className="circle"></div>
             </li>
             <li className="nav_list">
-                <a href="#contact" className="nav-link">Virus</a>
+                <a href="#contact" className="nav-link">Pandemic</a>
                 <div className="circle"></div>
             </li>
             <li className="nav_list">
