@@ -8,6 +8,7 @@ import About from './Components/About/About'
 import ImageSlider from './Components/Carousel/ImageSlider';
 import ImageSliderAuto from './Components/Carousel/ImageSliderAuto';
 import {ImageData, TextData} from './Components/Carousel/json/jsonData';
+import MapComponent from './Components/Map/MapComponent';
 
 function App() {
 
@@ -24,6 +25,9 @@ function App() {
       </section>
       <section id="helpline">
         <Helplines/>
+      </section>
+      <section id='flood'>
+        <MapComponent />
       </section>
     </div>
   );

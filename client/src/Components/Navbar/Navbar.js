@@ -42,7 +42,7 @@ function Navbar() {
     <div className="nav-menu" id="myNavMenu">
         <ul className="nav_menu_list">
             <li className="nav_list">
-                <a href="#home" className="nav-link active-link">Home</a>
+                <a href="#hero" className="nav-link active-link">Home</a>
                 <div className="circle"></div>
             </li>
             <li className="nav_list">
@@ -50,7 +50,7 @@ function Navbar() {
                 <div className="circle"></div>
             </li>
             <li className="nav_list">
-                <a href="#projects" className="nav-link">Flood</a>
+                <a href="#flood" className="nav-link">Flood</a>
                 <div className="circle"></div>
             </li>
             <li className="nav_list">

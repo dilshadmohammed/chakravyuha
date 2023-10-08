@@ -24,73 +24,39 @@ const ImageSliderAuto = (props) => {
     } else {
       setCountAuto(0);
     }
+  };
 
-    const [sliderProperty, setSliderProperty] = useState(SliderProperty);
+  useEffect(() => {
+    setSliderProperty({
+      ImageNo: props.ImageData[countAuto].ImageNo,
+      ImageName: props.ImageData[countAuto].ImageName,
+      ImageSrc: props.ImageData[countAuto].ImageSrc
+    });
+  }, [countAuto]);
 
-    const { ImageNo, ImageName, ImageSrc } = sliderProperty;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      NextClick();
+    }, props.SlideInterValTime + 500);
 
-    const [countAuto, setCountAuto] = useState(0);
+    return () => clearInterval(interval);
+  }, [countAuto]);
 
-
-    const [animationCls, setAnimationCls] = useState('displayBlock fade');
-
-
-
-    const NextClick = () => {
-
-        setAnimationCls(() => ('displayNone fade'));
-        const myTimeout = setTimeout(() => {
-            setAnimationCls('displayBlock fade')
-        }, 100);
-
-        if (countAuto <= props.ImageData.length - 1) {
-            setCountAuto(countAuto + 1);
-        }
-
-        if (countAuto === props.ImageData.length - 1) {
-            setCountAuto(0);
-        }
-
-    };
-
-    useEffect(() => {
-
-        setSliderProperty((previous) => ({ ...previous, ImageNo: props.ImageData[countAuto].ImageNo, ImageName: props.ImageData[countAuto].ImageName, ImageSrc: props.ImageData[countAuto].ImageSrc }));
-
-    }, [countAuto]);
-
-
-
-    useEffect(() => {
-
-        const interval = setInterval(() => {
-
-            NextClick();
-
-        }, props.SlideInterValTime + 3000);
-
-        return () => clearInterval(interval);
-
-    }, [countAuto]);
-
-
-
-    return (
-        <>
-            <div className='slideshow-container '>
-
-
-                <div className={animationCls}>
-                    <div className="numbertext">{ImageNo}</div>
-                    <img src={ImageSrc} className='imageStyle' alt="Img" />
-                </div>
-                {/* <div className="text">{ImageName}</div> */}
-            </div>
-
-
-        </>
-
-    );
+  return (
+    <>
+      <div className="slideshow-container">
+      <div className={animationCls + ' fade'}>
+          <div className="numbertext">{ImageNo}</div>
+          <img src={ImageSrc} className="imageStyle" alt="Img" />
+        </div>
+        <div className="text">{ImageName}</div>
+        <div className="overlay">
+            <h2>{ImageName}</h2>
+          <p>{props.TextData[countAuto]}</p>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default ImageSliderAuto;

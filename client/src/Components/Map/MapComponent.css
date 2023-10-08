@@ -2,4 +2,13 @@
 .map-box {
     width: 90%;
    margin: 0 auto 0 auto;
+   padding-bottom: 10em;
   }
+  
+h2 {
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
